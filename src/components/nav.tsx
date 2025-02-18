@@ -37,33 +37,30 @@ export const Nav = () => {
           </div>
         </div>
 
-        <div onClick={handleNav}>
+        <div onClick={handleNav} className="cursor-pointer">
           <Menu />
         </div>
         {nav && (
-          <div className=" fixed inset-0 w-[70%] bg-text-dark text-text">
-            <div className="absolute top-4 right-4" onClick={handleNav}>
+          <div className="h-screen px-3 pt-10 fixed inset-0 w-[70%] bg-text-dark text-text">
+            <div
+              className="absolute top-4 right-4 cursor-pointer"
+              onClick={handleNav}
+            >
               {" "}
               <X />
             </div>
 
             <div>
-              <Image
-                src={logo}
-                alt="logo"
-                width={100}
-                height={100}
-                className="w-full "
-              />
+              <Image src={logo} alt="logo" height={100} className="w-[70%] " />
             </div>
 
-            <ul className="space-y-6">
+            <ul className="space-y-8  pl-2 pt-4">
               <li>About Us</li>
               <li>Services</li>
               <li>Blog</li>
               <li>Contact Us</li>
             </ul>
-            <div>
+            <div className="mt-10">
               <DarkButton text="Book a Consultation" />
             </div>
           </div>
