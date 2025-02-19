@@ -1,3 +1,4 @@
-interface props {
+interface buttonProps {
   text: string;
+  classname?: string;
 }
