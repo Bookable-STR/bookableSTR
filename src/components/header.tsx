@@ -2,6 +2,7 @@ import React from "react";
 import { Nav } from "./nav";
 import { LightButton } from "./ui/lightButton";
 import { NoBgButton } from "./ui/noBgButton";
+import Link from "next/link";
 
 export const Header = () => {
   return (
@@ -24,7 +25,9 @@ export const Header = () => {
         <div className="md:flex items-center  md:gap-[40px] my-4">
           <LightButton text="Get Bookable" />
           <div className="mt-[20px] md:mt-0">
-            <NoBgButton text="See our Work" />
+            <Link href="/about">
+              <NoBgButton text="See our Work" />
+            </Link>
           </div>
         </div>
       </div>
