@@ -12,7 +12,7 @@ export const Header = () => {
         <p className="text-[10px] md:text-xl uppercase">
           UNLOCK YOUR SHORT-TERM RENTALS FULL POTENTIAL
         </p>
-        <h1 className=" md:leading-[56px] leading-[30px] text-2xl w-full md:text-[50px]  uppercase font-bold font-quicksand">
+        <h1 className=" md:leading-[56px] leading-[30px] text-2xl w-full md:w-[70%] md:text-[50px]  uppercase font-bold font-quicksand">
           YOUR PROPERTY DESERVES MORE THAN JUST LISTINGS.
         </h1>
         <p className="md:w-[70%] md:leading-[36px] leading-[21px] text-base w-full md:text-[28px] text-center">
