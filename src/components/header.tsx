@@ -21,7 +21,7 @@ export const Header = () => {
           control with no third-party fees.
         </p>
 
-        <div className="md:flex  md:gap-3 my-4">
+        <div className="md:flex items-center  md:gap-3 my-4">
           <LightButton text="Get Bookable" />
           <div className="mt-3 md:mt-0">
             <NoBgButton text="See our Work" />
