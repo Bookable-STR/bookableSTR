@@ -33,13 +33,13 @@ export const Nav = () => {
 
   return (
     <div className="py-6 text-2xl relative">
-      <nav className="border-2 border-text rounded-full flex items-center py-3 md:px-6 px-2 justify-between">
+      <nav className="border-2 border-text rounded-full flex items-center py-3 md:px-6 lg:pr-[16px] px-2 justify-between">
         <Image
           src={logo}
           alt="logo"
-          width={246}
-          height={86}
-          className="w-[158px] h-[56px]"
+          width={999}
+          height={999}
+          className="w-[158px] lg:w-[246px] flex-shrink-0"
         />
 
         <div className="md:flex hidden justify-between gap-20 items-center">
@@ -53,7 +53,7 @@ export const Nav = () => {
         </div>
 
         {/* Mobile Menu Button */}
-        <div onClick={handleNav} className="cursor-pointer md:hidden block">
+        <div onClick={handleNav} className="cursor-pointer md:hidden block pr-[10px]">
           <Menu />
         </div>
       </nav>
@@ -76,7 +76,7 @@ export const Nav = () => {
               animate={{ x: "0%", opacity: 1 }}
               exit={{ x: "-100%", opacity: 0 }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
-              className="h-screen pt-10 fixed inset-0 w-[70%] bg-text-dark text-text z-20"
+              className="h-screen pt-[52px] fixed inset-0 w-[75%] max-w-[270px] bg-text-dark text-text z-20"
             >
               {/* <div
                 className="absolute top-4 right-4 cursor-pointer"
@@ -87,7 +87,7 @@ export const Nav = () => {
 
               <Image src={logo} alt="logo" height={80} width={226} />
 
-              <ul className="space-y-8 pl-2 mx-3 pt-8">
+              <ul className="space-y-[48px] pl-2 mx-3 pt-[40px]">
                 <li>About Us</li>
                 <li>Services</li>
                 <li>Blog</li>

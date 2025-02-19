@@ -2,6 +2,7 @@ import { Quicksand, Nunito } from "next/font/google";
 import "./globals.css";
 import { ReactNode } from "react";
 import React from "react";
+import Footer from "../components/footer";
 
 const quicksand = Quicksand({
   variable: "--font-quick-sand",
@@ -27,6 +28,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang="en">
       <body className={`${quicksand.variable} ${nunito.variable} antialiased`}>
         {children}
+        <Footer />
       </body>
     </html>
   );
