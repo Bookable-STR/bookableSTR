@@ -28,6 +28,7 @@ module.exports = {
         "primary-gradient": "linear-gradient(90deg, #054678 20%, #0981DE 80%)",
         mobile: "url('../images/mobile-header.png')",
         desktop: "url('../images/header-img.png')",
+        accessTorch: "url('../images/access-image2.png')",
       },
       fontFamily: {
         quicksand: "var(--font-quick-sand)",

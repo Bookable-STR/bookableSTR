@@ -5,10 +5,20 @@ import { motion, AnimatePresence } from "framer-motion";
 import logo from "../images/logo.png";
 import { DarkButton } from "./ui/darkButton";
 import { Menu, X } from "lucide-react";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
+
+const navItems = [
+  { id: 1, text: "About Us", href: "/about" },
+  { id: 2, text: "Services", href: "/service" },
+  { id: 3, text: "Blog", href: "/blog" },
+  { id: 4, text: "Contact Us", href: "/contact-us" },
+];
 
 export const Nav = () => {
   const [nav, showNav] = useState(false);
   const navRef = useRef<HTMLDivElement>(null);
+  const pathname = usePathname();
 
   const handleNav = () => {
     showNav((prev) => !prev);
@@ -44,10 +54,18 @@ export const Nav = () => {
 
         <div className="md:flex hidden justify-between gap-10 text-xl items-center">
           <ul className="flex gap-10">
-            <li>About Us</li>
-            <li>Services</li>
-            <li>Blog</li>
-            <li>Contact Us</li>
+            {navItems.map((items) => {
+              const isActive = pathname === items.href;
+              return (
+                <li
+                  key={items.id}
+                  className={`${isActive ? `border-b` : `border-none`}`}
+                >
+                  {" "}
+                  <Link href={items.href}>{items.text}</Link>
+                </li>
+              );
+            })}
           </ul>
           <DarkButton text="Book a Consultation" classname="text-xl" />
         </div>
@@ -91,10 +109,18 @@ export const Nav = () => {
               <Image src={logo} alt="logo" height={80} width={226} />
 
               <ul className="space-y-[48px] pl-2 mx-3 pt-[40px]">
-                <li>About Us</li>
-                <li>Services</li>
-                <li>Blog</li>
-                <li>Contact Us</li>
+                {navItems.map((items) => {
+                  const isActive = pathname === items.href;
+                  return (
+                    <li
+                      key={items.id}
+                      className={`${isActive ? `border-b ` : `border-none`}`}
+                    >
+                      {" "}
+                      <Link href={items.href}>{items.text}</Link>
+                    </li>
+                  );
+                })}
               </ul>
               <div className="mt-20 mx-3">
                 <DarkButton text="Get Bookable" classname="text-xl p-3" />
