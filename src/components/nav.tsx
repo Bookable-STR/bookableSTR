@@ -33,7 +33,7 @@ export const Nav = () => {
 
   return (
     <div className="py-6 text-2xl relative">
-      <nav className="border-2 border-text rounded-full flex items-center py-3 md:px-6 lg:pr-[16px] px-2 justify-between">
+      <nav className="border-2 border-text rounded-full flex gap-10 items-center py-3 md:px-6 lg:pr-[16px] px-2 ">
         <Image
           src={logo}
           alt="logo"
@@ -42,18 +42,21 @@ export const Nav = () => {
           className="w-[158px] lg:w-[246px] flex-shrink-0"
         />
 
-        <div className="md:flex hidden justify-between gap-20 items-center">
+        <div className="md:flex hidden justify-between gap-10 text-xl items-center">
           <ul className="flex gap-10">
             <li>About Us</li>
             <li>Services</li>
             <li>Blog</li>
             <li>Contact Us</li>
           </ul>
-          <DarkButton text="Book a Consultation" />
+          <DarkButton text="Book a Consultation" classname="text-xl" />
         </div>
 
         {/* Mobile Menu Button */}
-        <div onClick={handleNav} className="cursor-pointer md:hidden block pr-[10px]">
+        <div
+          onClick={handleNav}
+          className="cursor-pointer md:hidden block pr-[10px]"
+        >
           <Menu />
         </div>
       </nav>
