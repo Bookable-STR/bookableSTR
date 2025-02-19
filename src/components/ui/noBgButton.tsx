@@ -6,7 +6,7 @@ export const NoBgButton = ({ text, classname }: buttonProps) => {
     <div>
       <button
         className={clsx(
-          "bg-none text-text border-b-2 border-b-text py-2 px-3 md:text-2xl text-base transition duration-300 transform hover:bg-primaryBlue hover:rounded-full hover:scale-105",
+          "md:w-[201px] w-[117px] h-[28px] md:h-[62px] text-base rounded-none md:py-[12px] py-[8px] px-[2px] space-x-[10px] md:text-2xl  transition duration-300 transform  hover:bg-primaryBlue hover:rounded-full hover:scale-105 bg-none text-text border-b-2 border-b-text font-bold leading-[21px]  md:leading-[32.74px] tracking-[6%]",
           classname
         )}
       >
