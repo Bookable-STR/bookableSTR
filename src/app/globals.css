@@ -27,3 +27,26 @@ h5,
 h6 {
   font-family: var(--quick-sand);
 }
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  opacity: 1;
+  background: rgb(182, 182, 182);
+  transition: all;
+  transition-duration: 300ms;
+  margin-top: 40px;
+}
+
+.swiper .swiper-pagination-bullet-active {
+  color: #fff;
+  background: #007aff;
+  scale: 120%;
+  transition: all;
+  transition-duration: 300ms;
+}

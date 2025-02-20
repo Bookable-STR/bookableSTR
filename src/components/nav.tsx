@@ -43,37 +43,38 @@ export const Nav = () => {
 
   return (
     <div className="py-6 text-2xl relative">
-      <nav className="border-2 border-text rounded-full flex gap-10 items-center py-3 md:px-6 lg:pr-[16px] px-2 ">
-        <Image
-          src={logo}
-          alt="logo"
-          width={999}
-          height={999}
-          className="w-[158px] lg:w-[246px] flex-shrink-0"
-        />
+      <nav className="border-2 border-text rounded-full flex gap-10 items-center justify-between py-3 md:px-6 lg:pr-[16px] px-2 ">
+        <Link href={"/"}>
+          <Image
+            src={logo}
+            alt="logo"
+            width={999}
+            height={999}
+            className="w-[158px] lg:w-[246px] flex-shrink-0"
+          />
+        </Link>
 
-        <div className="md:flex hidden justify-between gap-10 text-xl items-center">
-          <ul className="flex gap-10">
-            {navItems.map((items) => {
-              const isActive = pathname === items.href;
-              return (
-                <li
-                  key={items.id}
-                  className={`${isActive ? `border-b` : `border-none`}`}
-                >
-                  {" "}
-                  <Link href={items.href}>{items.text}</Link>
-                </li>
-              );
-            })}
-          </ul>
-          <DarkButton text="Book a Consultation" classname="text-xl" />
-        </div>
+        <ul className="gap-10 text-xl hidden lg:flex">
+          {navItems.map((items) => {
+            const isActive = pathname === items.href;
+            return (
+              <li
+                key={items.id}
+                className={`${isActive ? `border-b` : `border-none`}`}
+              >
+                {" "}
+                <Link href={items.href}>{items.text}</Link>
+              </li>
+            );
+          })}
+        </ul>
+
+        <DarkButton text="Book a Consultation" classname="text-xl hidden lg:block" />
 
         {/* Mobile Menu Button */}
         <div
           onClick={handleNav}
-          className="cursor-pointer md:hidden block pr-[10px]"
+          className="cursor-pointer lg:hidden block pr-[10px]"
         >
           <Menu />
         </div>

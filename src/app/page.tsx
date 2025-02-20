@@ -4,6 +4,7 @@ import Homepage_CTA from "./homepage_components/cta";
 import { Features } from "../components/features";
 import { Vision } from "../components/vision";
 import { Access } from "../components/access";
+import Reviews from "./homepage_components/reviews";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Features />
       <Vision />
       <Access />
+      <Reviews />
       <Homepage_CTA />
     </div>
   );
