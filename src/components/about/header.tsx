@@ -19,8 +19,8 @@ export const Header = () => {
           direct bookings for your properties across the world.
         </p>
 
-        <div className="flex items-center my-4">
-          <LightButton text="Get Started" />
+        <div className="flex items-center mt-4 md:mb-4 mb-32">
+          <LightButton text="Get Bookable" />
         </div>
       </div>
     </div>
