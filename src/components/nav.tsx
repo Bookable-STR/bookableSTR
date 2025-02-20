@@ -115,7 +115,9 @@ export const Nav = () => {
                   return (
                     <li
                       key={items.id}
-                      className={`${isActive ? `border-b ` : `border-none`}`}
+                      className={`${
+                        isActive ? `border-b w-fit` : `border-none`
+                      }`}
                     >
                       {" "}
                       <Link href={items.href}>{items.text}</Link>

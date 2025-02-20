@@ -22,7 +22,7 @@ export const Header = () => {
           control with no third-party fees.
         </p>
 
-        <div className="md:flex items-center  md:gap-[40px] my-4">
+        <div className="md:flex items-center  md:gap-[40px] mt-4 md:mb-4 mb-32">
           <LightButton text="Get Bookable" />
           <div className="mt-[20px] md:mt-0">
             <Link href="/about">
