@@ -6,10 +6,10 @@ import Link from "next/link";
 
 export const Header = () => {
   return (
-    <div className="md:bg-mobile md:text-2xl text-base  bg-desktop px-6 font-nunito md:px-10 bg-cover bg-center text-text w-full">
+    <div className="md:bg-mobile md:text-2xl text-base bg-desktop px-6 font-nunito md:px-10 bg-cover bg-center text-text w-full">
       <Nav />
 
-      <div className="flex flex-col text-center items-center justify-center md:gap-6 gap-3 pt-20 pb-10">
+      <div className="flex flex-col text-center items-center justify-center md:gap-6 gap-3 pt-20 pb-20">
         <p className="text-[10px] md:text-xl uppercase">
           UNLOCK YOUR SHORT-TERM RENTALS FULL POTENTIAL
         </p>
