@@ -43,7 +43,7 @@ export const Nav = () => {
 
   return (
     <div className="py-6 text-2xl relative">
-      <nav className="border-2 border-text rounded-full flex gap-10 items-center py-3 md:px-6 lg:pr-[16px] px-2 ">
+      <nav className="border-2 border-text rounded-full flex gap-10 justify-between md:justify-normal items-center py-3 md:px-6 lg:pr-[16px] px-2 ">
         <Image
           src={logo}
           alt="logo"
@@ -114,7 +114,9 @@ export const Nav = () => {
                   return (
                     <li
                       key={items.id}
-                      className={`${isActive ? `border-b ` : `border-none`}`}
+                      className={`${
+                        isActive ? `border-b w-fit` : `border-none`
+                      }`}
                     >
                       {" "}
                       <Link href={items.href}>{items.text}</Link>

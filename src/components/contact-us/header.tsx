@@ -19,7 +19,7 @@ export const Header = () => {
           professional website.
         </p>
 
-        <div className="flex items-center my-4">
+        <div className="flex items-center mt-4 md:mb-4 mb-32">
           <LightButton text="Get Bookable" />
         </div>
       </div>
