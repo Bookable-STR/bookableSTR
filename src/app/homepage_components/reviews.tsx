@@ -3,7 +3,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import 'swiper/css';
 import 'swiper/css/pagination';
 import customer1 from "../../images/customer1.png"
-
 import { Pagination } from 'swiper/modules';
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -65,7 +64,7 @@ export default function Reviews() {
                 <Swiper
                     slidesPerView={screenWidth >= 1024 ? 2 : 1}
                     spaceBetween={32}
-                    pagination={{ clickable: true }}
+                    pagination={{ el: '.custom-pagination', clickable: true }}
                     modules={[Pagination]}
                     className="mySwiper"
                 >
@@ -98,6 +97,7 @@ export default function Reviews() {
                         </SwiperSlide>
                     ))}
                 </Swiper>
+                <div className="custom-pagination flex justify-center gap-[5px] mt-[20px]"></div>
             </div>
         </div>
     );
