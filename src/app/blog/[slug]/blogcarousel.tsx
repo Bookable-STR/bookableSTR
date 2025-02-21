@@ -1,56 +1,48 @@
-"use client"
+"use client";
 import { Swiper, SwiperSlide } from "swiper/react";
 import 'swiper/css';
 import 'swiper/css/pagination';
-import blog1 from "../../../images/blogimg1.png"
 import { Pagination } from 'swiper/modules';
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { client } from "../../../../sanity";
 
-export default function BlogCarousel() {
+export default function BlogCarousel({ slug }: { slug: any }) {
 
     const [screenWidth, setScreenWidth] = useState(0);
+    const [blogs, setBlogs] = useState<any>();
 
     useEffect(() => {
-        setScreenWidth(window.innerWidth)
+        async function fetchBlogs() {
+            const query = `*[_type == "post"] {
+                _id,
+                title,
+                slug,
+                "mainImage": mainImage.asset->url,
+                publishedAt,
+                body
+            }`;
+            const blogs = await client.fetch(query);
+            if (blogs.length > 0) {
+                setBlogs(blogs)
+            }
+        }
+        fetchBlogs();
+    }, []);
+
+    useEffect(() => {
+        setScreenWidth(window.innerWidth);
         const handleResize = () => setScreenWidth(window.innerWidth);
 
         window.addEventListener("resize", handleResize);
         return () => window.removeEventListener("resize", handleResize);
     }, []);
 
-    const reviews = [
-        {
-            img: blog1,
-            title: "BLOG TITLE",
-            body: `Body text about the blog post. Body text about the blog post. 
-                    Body text about the blog post. Body text about the blog post. 
-                    Body text about the blog post. Body text about the blog.`,
-            date: `16th Feb 2025`
-        },
-        {
-            img: blog1,
-            title: "BLOG TITLE",
-            body: `Body text about the blog post. Body text about the blog post. 
-                    Body text about the blog post. Body text about the blog post. 
-                    Body text about the blog post. Body text about the blog.`,
-            date: `16th Feb 2025`
-        },
-        {
-            img: blog1,
-            title: "BLOG TITLE",
-            body: `Body text about the blog post. Body text about the blog post. 
-                    Body text about the blog post. Body text about the blog post. 
-                    Body text about the blog post. Body text about the blog.`,
-            date: `16th Feb 2025`
-        },
-    ]
-
     return (
         <div className="bg-[#121212] py-[40px] px-[16px] lg:p-[102px]">
             <div className="text-white font-quicksand font-bold text-[20px] text-center lg:text-[48px]">
-                YOU MAY ALSO LIKE
+                ARTICLES
             </div>
             <div className="mt-[56px]">
                 <Swiper
@@ -60,24 +52,21 @@ export default function BlogCarousel() {
                     modules={[Pagination]}
                     className="mySwiper"
                 >
-                    {reviews.map((i, index) => (
+                    {blogs && blogs.length > 0 && blogs.filter((i: any) => i.slug.current !== slug).map((i: any, index: any) => (
                         <SwiperSlide key={index}>
                             <div className="bg-[#FFFBFB] p-[16px] pb-[32px] lg:p-[28px] rounded-[16px] relative overflow-hidden lg:flex lg:flex-row-reverse lg:items-center">
                                 <div className="relative w-full h-[200px] lg:h-[350px] lg:w-[230px] lg:flex-shrink-0 rounded-t-[8px] overflow-hidden">
-                                    <Image src={i.img} alt="blog" fill className="object-cover" />
+                                    <Image src={i.mainImage} alt="blog" fill className="object-cover" />
                                 </div>
-                                <div className="mt-[24px] lg:mt-0">
+                                <div className="mt-[24px] lg:mt-0 w-full h-full">
                                     <div className="text-[#121212] font-quicksand font-bold lg:text-[32px]">
                                         {i.title}
                                     </div>
-                                    <div className="mt-[5px] text-[#121212] text-[12px] font-medium font-nunito">
-                                        {i.date}
-                                    </div>
-                                    <div className="font-nunito font-medium text-[#121212] mt-[16px] lg:text-[20px]">
-                                        {i.body}
+                                    <div className="mt-[5px] text-[#121212] text-[12px] lg:text-base font-medium font-nunito">
+                                        {new Date(i.publishedAt).toLocaleDateString("en-US", { dateStyle: 'full' })}
                                     </div>
                                     <div className="mt-[20px]">
-                                        <Link href={"/blog/12dfg32amu24"} className="font-quicksand font-bold py-[8px] lg:text-[24px] border-b border-[#054678] text-[#054678]">
+                                        <Link href={`/blog/${i.slug.current}`} className="font-quicksand font-bold py-[8px] lg:text-[24px] border-b border-[#054678] text-[#054678]">
                                             Read More
                                         </Link>
                                     </div>

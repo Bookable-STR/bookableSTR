@@ -48,7 +48,7 @@ export default function Footer() {
               );
             })}
           </div>
-          <div className="font-nunito text-xl lg:text-[22px]">
+          <div className="font-nunito text-xl lg:text-[22px] mt-[40px] lg:mt-0">
             <div className="font-quicksand font-bold text-[24px]  lg:text-[28px]">
               INFORMATION
             </div>
