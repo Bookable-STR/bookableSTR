@@ -2,7 +2,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import 'swiper/css';
 import 'swiper/css/pagination';
-import blog1 from "../../images/blogimg1.png"
+import blog1 from "../../../images/blogimg1.png"
 import { Pagination } from 'swiper/modules';
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -50,7 +50,7 @@ export default function BlogCarousel() {
     return (
         <div className="bg-[#121212] py-[40px] px-[16px] lg:p-[102px]">
             <div className="text-white font-quicksand font-bold text-[20px] text-center lg:text-[48px]">
-                ARTICLES
+                YOU MAY ALSO LIKE
             </div>
             <div className="mt-[56px]">
                 <Swiper
