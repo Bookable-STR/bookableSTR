@@ -1,6 +1,7 @@
 import React from "react";
 import { Nav } from "../nav";
 import { LightButton } from "../ui/lightButton";
+import Link from "next/link";
 
 export const Header = () => {
   return (
@@ -20,7 +21,12 @@ export const Header = () => {
         </p>
 
         <div className="flex items-center mt-4 md:mb-4 mb-32">
-          <LightButton text="Get Bookable" />
+          <Link
+            href="mailto:bookablestr@gmail.com?subject=Inquiry&body=Hello,%I%have%a%question."
+            target="_blank"
+          >
+            <LightButton text="Get Bookable" />
+          </Link>
         </div>
       </div>
     </div>

@@ -1,10 +1,21 @@
+"use client";
 import Image from "next/image";
 import logo from "../images/logo.png";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
+const navItems = [
+  { id: 1, text: "About Us", href: "/about" },
+  { id: 2, text: "Services", href: "/service" },
+  { id: 3, text: "Blog", href: "/blog" },
+  { id: 4, text: "Contact Us", href: "/contact-us" },
+];
 
 export default function Footer() {
+  const pathname = usePathname();
   return (
     <div>
-      <div className="bg-[#120F11] text-white w-full py-[60px] lg:flex lg:items-center lg:justify-between">
+      <div className="bg-[#120F11] text-white w-full py-[60px] lg:flex  lg:justify-between">
         {/*...*/}
         <div className="">
           <Image
@@ -22,18 +33,23 @@ export default function Footer() {
         </div>
 
         {/*...*/}
-        <div className="grid grid-cols-1 lg:grid-cols-2 mt-[40px] lg:mt-0 px-[16px] gap-[40px] lg:gap-[0] lg:mr-[100px] lg:w-[40vw] lg:px-0 lg:max-w-[700px]">
-          <div className="font-nunito text-[20px] lg:text-[24px]">
-            <div className="font-quicksand font-bold text-[24px] lg:text-[28px]">
+        <div className="lg:flex block lg:pt-12 mt-[40px] lg:mt-0 px-[16px] items-start gap-10 lg:mr-[100px] lg:w-[40vw] lg:px-0 ">
+          <div className="font-nunito text-xl lg:text-[22px]">
+            <div className="font-quicksand pb-3 font-bold text-[24px]  lg:text-[28px]">
               NAVIGATION
             </div>
-            <div className="mt-[12px]">About Us</div>
-            <div>Services</div>
-            <div>Blog</div>
-            <div>Contact Us</div>
+            {navItems.map((items) => {
+              const isActive = pathname === items.href;
+              return (
+                <div key={items.id} className={`${isActive ? `` : ``}`}>
+                  {" "}
+                  <Link href={items.href}>{items.text}</Link>
+                </div>
+              );
+            })}
           </div>
-          <div className="font-nunito text-[20px] lg:text-[24px]">
-            <div className="font-quicksand font-bold text-[24px] lg:text-[28px]">
+          <div className="font-nunito text-xl lg:text-[22px]">
+            <div className="font-quicksand font-bold text-[24px]  lg:text-[28px]">
               INFORMATION
             </div>
             <div className="mt-[12px]">Phone: +447787458301 </div>

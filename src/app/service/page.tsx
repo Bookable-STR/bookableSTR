@@ -1,58 +1,73 @@
-"use client"
+"use client";
 import { Header } from "./header";
 import Reviews from "../homepage_components/reviews";
 import Homepage_CTA from "../homepage_components/cta";
 
 export default function Services() {
-    return (
-        <div>
-            <Header />
-            <div className="bg-white text-[#121212] py-[40px] px-[16px] lg:py-[60px]">
-                <div className="font-nunito font-medium text-[12px] lg:text-[24px] text-center">WHY CHOOSE</div>
-                <div className="font-quicksand font-bold text-[20px] lg:text-[80px] text-center">BOOKABLESTR FOR YOUR PROJECT</div>
-            </div>
-            <div className="w-full flex items-center justify-center bg-[#121212] py-[45px] lg:py-[100px] text-white px-[16px]">
-                <div className="overflow-x-auto servicesscroll">
-                    <div className="w-max flex gap-[16px] lg:gap-[50px] text-[20px] lg:text-[28px] font-bold font-quicksand">
-                        <div className="">SPEEDY DELIVERY</div>
-                        <div className="">DIRECT BOOKINGS WEBSITES</div>
-                        <div className="">CUSTOMIZABLE</div>
-                        <div className="">RELIABLE</div>
-                    </div>
-                </div>
-            </div>
-            <div className="bg-white flex flex-col items-center justify-center py-[40px] lg:py-[60px] px-[16px] lg:px-[40px]">
-                <div className="font-nunito font-medium text-[12px] lg:text-[24px]">WE OFFER</div>
-                <div className="font-quicksand font-bold text-[20px] lg:text-[60px]">STR WEBSITE BUILDING</div>
-                <div className="mt-[28px] grid grid-cols-1 lg:grid-cols-3 gap-[20px]">
-                    <div className="border-[0.5px] border-[#121212] text-[#121212] p-[16px] lg:p-[26px] rounded-[16px] max-w-[500px] lg:h-full lg:flex lg:flex-col lg:justify-between">
-                        <div className="font-quicksand font-bold text-[20px] lg:text-[36px]">
-                            CUSTOM-DESIGNED <span className="text-[#054678]">STR BOOKING</span> WEBSITES
-                        </div>
-                        <div className="mt-[40px] text-[20px] lg:text-[28px] font-nunito">
-                            We create sleek, user-friendly websites that highlight your property, increase direct bookings, and boost your online presence.
-                        </div>
-                    </div>
-                    <div className="border-[0.5px] border-[#121212] text-[#121212] p-[16px] lg:p-[26px] rounded-[16px] max-w-[500px] lg:h-full lg:flex lg:flex-col lg:justify-between">
-                        <div className="font-quicksand font-bold text-[20px] lg:text-[36px]">
-                            INTEGRATED MARKETING TOOLS FOR <span className="text-[#054678]">GROWTH</span>
-                        </div>
-                        <div className="mt-[40px] text-[20px] lg:text-[28px] font-nunito">
-                            Your website will include powerful tools like WhatsApp messaging for instant guest chats, email pop-ups for lead capture, and marketing features to boost visibility and drive repeat bookings.
-                        </div>
-                    </div>
-                    <div className="border-[0.5px] bg-[#054678] text-white p-[16px] lg:p-[26px] rounded-[16px] max-w-[500px] lg:h-full lg:flex lg:flex-col lg:justify-between">
-                        <div className="font-quicksand font-bold text-[20px] lg:text-[36px]">
-                            EFFORTLESS AUTOMATION FOR MAXIMUM EFFICIENCY
-                        </div>
-                        <div className="mt-[40px] text-[20px] lg:text-[28px] font-nunito">
-                            We streamline bookings with automation, calendars, and guest tools, saving you time and enhancing the guest experience.
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <Reviews />
-            <Homepage_CTA />
+  return (
+    <div>
+      <Header />
+      <div className="bg-white text-[#121212] py-[40px] px-[16px] lg:py-[40px]">
+        <div className="font-nunito uppercase font-medium text-[12px] lg:text-[24px] text-center">
+          You bring the property
         </div>
-    );
+        <div className="font-quicksand font-bold lg:text-5xl text-xl uppercase text-center">
+          We help you optimize profit
+        </div>
+      </div>
+      <div className="w-full flex items-center justify-center bg-[#121212] py-[45px] lg:py-[100px] text-white px-[16px]">
+        <div className="overflow-x-auto servicesscroll">
+          <div className="w-max flex gap-[16px] lg:gap-[50px] text-[20px] lg:text-[28px] font-bold font-quicksand">
+            <div className="">SPEEDY DELIVERY</div>
+            <div className="">DIRECT BOOKINGS WEBSITES</div>
+            <div className="">CUSTOMIZABLE</div>
+            <div className="">RELIABLE</div>
+          </div>
+        </div>
+      </div>
+      <div className="bg-white flex flex-col items-center justify-center py-[40px] lg:py-[60px] px-[16px] lg:px-[40px]">
+        <div className="font-nunito font-medium text-[12px] lg:text-[24px]">
+          WE OFFER
+        </div>
+        <div className="font-quicksand font-bold lg:text-5xl text-xl uppercase">
+          STR WEBSITE BUILDING
+        </div>
+        <div className="mt-[28px] grid grid-cols-1 lg:grid-cols-3 gap-[20px]">
+          <div className="border-[0.5px] border-[#121212] text-[#121212] p-[16px] lg:p-[26px] rounded-[16px] max-w-[500px] lg:h-full lg:flex lg:flex-col lg:justify-between">
+            <div className="font-quicksand font-bold text-[20px] lg:text-3xl">
+              CUSTOM-DESIGNED{" "}
+              <span className="text-[#054678]">STR BOOKING</span> WEBSITES
+            </div>
+            <div className="mt-[40px] text-[20px] lg:text-2xl font-nunito">
+              We create sleek, user-friendly websites that highlight your
+              property, increase direct bookings, and boost your online
+              presence.
+            </div>
+          </div>
+          <div className="border-[0.5px] border-[#121212] text-[#121212] p-[16px] lg:p-[26px] rounded-[16px] max-w-[500px] lg:h-full lg:flex lg:flex-col lg:justify-between">
+            <div className="font-quicksand font-bold text-[20px] lg:text-3xl">
+              INTEGRATED MARKETING TOOLS FOR{" "}
+              <span className="text-[#054678]">GROWTH</span>
+            </div>
+            <div className="mt-[40px] text-[20px] lg:text-2xl font-nunito">
+              Your website will include powerful tools like WhatsApp messaging
+              for instant guest chats, email pop-ups for lead capture, and
+              marketing features to boost visibility and drive repeat bookings.
+            </div>
+          </div>
+          <div className="border-[0.5px] bg-[#054678] text-white p-[16px] lg:p-[26px] rounded-[16px] max-w-[500px] lg:h-full lg:flex lg:flex-col lg:justify-between">
+            <div className="font-quicksand font-bold text-[20px] lg:text-3xl">
+              EFFORTLESS AUTOMATION FOR MAXIMUM EFFICIENCY
+            </div>
+            <div className="mt-[40px] text-[20px] lg:text-2xl font-nunito">
+              We streamline bookings with automation, calendars, and guest
+              tools, saving you time and enhancing the guest experience.
+            </div>
+          </div>
+        </div>
+      </div>
+      <Reviews />
+      <Homepage_CTA />
+    </div>
+  );
 }

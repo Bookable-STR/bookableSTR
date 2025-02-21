@@ -23,7 +23,12 @@ export const Header = () => {
         </p>
 
         <div className="md:flex items-center  md:gap-[40px] mt-4 md:mb-4 mb-32">
-          <LightButton text="Get Bookable" />
+          <Link
+            href="mailto:bookablestr@gmail.com?subject=Inquiry&body=Hello, I have a question."
+            target="_blank"
+          >
+            <LightButton text="Get Bookable" />
+          </Link>
           <div className="mt-[20px] md:mt-0">
             <Link href="/about">
               <NoBgButton text="See our Work" />

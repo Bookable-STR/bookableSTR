@@ -2,6 +2,7 @@ import React from "react";
 import { DarkButton } from "../ui/darkButton";
 import logo from "../../images/logo-bg.png";
 import Image from "next/image";
+import Link from "next/link";
 
 export const Maximize = () => {
   return (
@@ -16,7 +17,12 @@ export const Maximize = () => {
         </p>
 
         <div className="flex items-center my-4">
-          <DarkButton text="Get Bookable" />
+          <Link
+            href="mailto:bookablestr@gmail.com?subject=Inquiry&body=Hello,%I%have%a%question."
+            target="_blank"
+          >
+            <DarkButton text="Get Bookable" />
+          </Link>
         </div>
       </div>
 

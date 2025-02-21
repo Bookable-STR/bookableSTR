@@ -68,8 +68,15 @@ export const Nav = () => {
             );
           })}
         </ul>
-
-        <DarkButton text="Book a Consultation" classname="text-xl hidden lg:block" />
+        <Link
+          target="_blank"
+          href="mailto:bookablestr@gmail.com?subject=Inquiry&body=Hello,%I%have%a%question."
+        >
+          <DarkButton
+            text="Book a Consultation"
+            classname="text-xl hidden md:block"
+          />
+        </Link>
 
         {/* Mobile Menu Button */}
         <div
@@ -106,8 +113,9 @@ export const Nav = () => {
               >
                 <X />
               </div> */}
-
-              <Image src={logo} alt="logo" height={80} width={226} />
+              <Link href={"/"}>
+                <Image src={logo} alt="logo" height={80} width={226} />
+              </Link>
 
               <ul className="space-y-[48px] pl-2 mx-3 pt-[40px]">
                 {navItems.map((items) => {
@@ -126,7 +134,12 @@ export const Nav = () => {
                 })}
               </ul>
               <div className="mt-20 mx-3">
-                <DarkButton text="Get Bookable" classname="text-xl p-3" />
+                <Link
+                  target="_blank"
+                  href="mailto:bookablestr@gmail.com?subject=Inquiry&body=Hello,%I%have%a%question."
+                >
+                  <DarkButton text="Get Bookable" classname="text-xl p-3" />
+                </Link>
               </div>
             </motion.div>
           </>

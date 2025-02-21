@@ -9,18 +9,22 @@ export const Header = () => {
       <Nav />
 
       <div className="flex flex-col text-center items-center justify-center md:gap-6 gap-3 pt-20 pb-10 lg:pb-20">
-        <p className="text-[10px] md:text-xl uppercase">
-          BOOKABLESTR
-        </p>
-        <h1 className="md:leading-[56px] leading-[30px] text-2xl w-full md:w-[70%] md:text-[50px] uppercase font-bold font-quicksand">
+        <p className="text-[10px] md:text-xl uppercase">BOOKABLESTR</p>
+        <h1 className="md:leading-[56px] leading-[30px] text-2xl w-full md:w-[60%] md:text-[50px] uppercase font-bold">
           YOUR PARTNER IN MAXIMIZING PROFIT.
         </h1>
-        <p className="md:w-[70%] md:leading-[36px] leading-[21px] text-base w-full md:text-[28px] text-center">
-          We offer short-term management services through website building to help you optimize profits from your rental properties.
+        <p className="md:w-[80%] md:leading-[36px] leading-[21px] text-base w-full md:text-[28px] text-center">
+          We offer short-term management services through website building to
+          help you optimize profits from your rental properties.
         </p>
 
         <div className="md:flex items-center  md:gap-[40px] mt-4 md:mb-4 mb-32">
-          <LightButton text="Get Bookable" />
+          <Link
+            target="_blank"
+            href="mailto:bookablestr@gmail.com?subject=Inquiry&body=Hello,%I%have%a%question."
+          >
+            <LightButton text="Get Bookable" />
+          </Link>
           <div className="mt-[20px] md:mt-0">
             <Link href="/about">
               <button

@@ -12,17 +12,20 @@ export const Header = () => {
         <p className="text-[10px] md:text-xl uppercase">
           INCREASED BOOKINGS, ONE BLOG AT A TIME
         </p>
-        <h1 className="md:leading-[56px] leading-[30px] text-2xl w-full md:w-[70%] md:text-[50px] uppercase font-bold font-quicksand">
+        <h1 className="md:leading-[56px] leading-[30px] text-2xl w-full md:w-[80%] md:text-[50px] uppercase font-bold font-quicksand">
           TIPS, STRATEGIES, TRENDS TO HELP YOU ATTRACT MORE GUESTS.
         </h1>
         <p className="md:w-[70%] md:leading-[36px] leading-[21px] text-base w-full md:text-[28px] text-center">
-          Our blog keeps you informed and ahead of the short-term property rental market.
+          Our blog keeps you informed and ahead of the short-term property
+          rental market.
         </p>
 
         <div className="md:flex items-center  md:gap-[40px] mt-4 md:mb-4 mb-32">
-          <LightButton text="Visit Blog" />
-          <div className="mt-[20px] md:mt-0">
-          </div>
+          <Link href="/blog/12dfg32amu24">
+            <LightButton text="Visit Blog" />
+          </Link>
+
+          <div className="mt-[20px] md:mt-0"></div>
         </div>
       </div>
     </div>
