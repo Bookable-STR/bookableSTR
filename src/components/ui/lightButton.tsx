@@ -6,7 +6,7 @@ export const LightButton = ({ text, classname }: buttonProps) => {
     <div>
       <button
         className={clsx(
-          "bg-primaryBlue-secondary text-primaryBlue rounded-full w-[200px] h-[46px] md:w-[320px] md:h-[80px] p-[12px] space-x-[10px] font-semibold md:text-2xl text-base transition duration-300 transform hover:bg-primaryBlue hover:text-text hover:scale-105",
+          "bg-primaryBlue-secondary text-primaryBlue rounded-full w-[200px] h-[46px] lg:w-[320px] lg:h-[80px] p-[12px] space-x-[10px] font-semibold lg:text-2xl text-base transition duration-300 transform hover:bg-primaryBlue hover:text-text hover:scale-105",
           classname
         )}
       >

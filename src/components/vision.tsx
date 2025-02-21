@@ -10,12 +10,12 @@ export const Vision = () => {
         <div className="pb-48">
           <div>
             <div className="leading-none font-semibold md:pb-4 pb-1">
-              <h3 className="text-[20px] md:text-[52px] text-text-dark">Our</h3>
-              <h3 className="text-[24px] md:text-[68px]  uppercase text-primaryBlue">
+              <h3 className="text-[20px] lg:text-[52px] text-text-dark">Our</h3>
+              <h3 className="text-[24px] lg:text-[68px]  uppercase text-primaryBlue">
                 Vision
               </h3>
             </div>
-            <p className="md:text-[28px] md:my-6 my-2 text-base md:leading-[36px]">
+            <p className="lg:text-[28px] md:my-6 my-2 text-base md:leading-[36px]">
               We empower property owners with seamless direct booking solutions,
               enhancing guest connections and maximizing growth.
             </p>
@@ -45,12 +45,12 @@ export const Vision = () => {
           </div>
           <div className="pt-48">
             <div className="leading-none font-semibold md:pb-4 pb-1">
-              <h3 className="text-[20px] md:text-[52px] text-text-dark">Our</h3>
-              <h3 className="text-[24px] md:text-[68px] uppercase text-primaryBlue">
+              <h3 className="text-[20px] lg-text-[52px] text-text-dark">Our</h3>
+              <h3 className="text-[24px] lg-text-[68px] uppercase text-primaryBlue">
                 Mission
               </h3>
             </div>
-            <p className="md:text-[28px] md:my-6 my-2 text-base md:leading-[36px]">
+            <p className="lg-text-[28px] md:my-6 my-2 text-base md:leading-[36px]">
               To create user-friendly, feature-rich direct booking websites that
               simplify operations, enhance guest experiences, and drive
               sustainable growth for property owners.

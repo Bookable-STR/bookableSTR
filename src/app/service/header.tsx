@@ -5,20 +5,20 @@ import Link from "next/link";
 
 export const Header = () => {
   return (
-    <div className="md:bg-mobile md:text-2xl text-base bg-desktop px-6 font-nunito md:px-10 bg-cover bg-center text-text w-full">
+    <div className="md:bg-mobile lg:text-2xl text-base bg-desktop px-6 font-nunito lg:px-10 bg-cover bg-center text-text w-full">
       <Nav />
 
-      <div className="flex flex-col text-center items-center justify-center md:gap-6 gap-3 pt-20 pb-10 lg:pb-20">
+      <div className="flex flex-col text-center items-center justify-center lg:gap-6 gap-3 pt-20 pb-10 lg:pb-20">
         <p className="text-[10px] md:text-xl uppercase">BOOKABLESTR</p>
-        <h1 className="md:leading-[56px] leading-[30px] text-2xl w-full md:w-[60%] md:text-[50px] uppercase font-bold">
+        <h1 className="lg:leading-[56px] leading-[30px] text-2xl w-full md:w-[60%] lg:text-[50px] uppercase font-bold">
           YOUR PARTNER IN MAXIMIZING PROFIT.
         </h1>
-        <p className="md:w-[80%] md:leading-[36px] leading-[21px] text-base w-full md:text-[28px] text-center">
+        <p className="md:w-[80%] lg:leading-[36px] leading-[21px] text-base w-full lg:text-[28px] text-center">
           We offer short-term management services through website building to
           help you optimize profits from your rental properties.
         </p>
 
-        <div className="md:flex items-center  md:gap-[40px] mt-4 md:mb-4 mb-32">
+        <div className="md:flex items-center  md:gap-[40px] mt-4 lg:mb-4 mb-32">
           <Link
             target="_blank"
             href="mailto:bookablestr@gmail.com?subject=Inquiry&body=Hello,%I%have%a%question."
@@ -29,7 +29,7 @@ export const Header = () => {
             <Link href="/about">
               <button
                 className={
-                  "h-[28px] md:h-[62px] text-base md:py-[12px] py-[8px] px-[2px] space-x-[10px] md:text-2xl transition duration-300 transform hover:scale-105 bg-none text-text border-b-2 border-b-text font-bold leading-[21px]  md:leading-[32.74px] tracking-[6%]"
+                  "h-[28px] md:h-[62px] text-base md:py-[12px] py-[8px] px-[2px] space-x-[10px] lg:text-2xl transition duration-300 transform hover:scale-105 bg-none text-text border-b-2 border-b-text font-bold leading-[21px]  md:leading-[32.74px] tracking-[6%]"
                 }
               >
                 View Previous Services

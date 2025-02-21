@@ -8,10 +8,10 @@ export const Maximize = () => {
   return (
     <div className="md:py-20 py-10 md:px-24 px-3 flex md:flex-row md:gap-20 gap-10 items-center justify-center flex-col-reverse">
       <div className=" w-full">
-        <h1 className=" md:text-[34px] md:leading-[40px] text-xl w-full uppercase font-bold font-quicksand">
+        <h1 className=" lg:text-[34px] md:leading-[40px] text-xl w-full uppercase font-bold font-quicksand">
           Your partner in maximizing short-term rental revenue
         </h1>
-        <p className=" md:leading-[36px] leading-[21px] text-base w-full md:w-[90%] md:text-[28px] py-4">
+        <p className=" md:leading-[36px] leading-[21px] text-base w-full md:w-[90%] lg:text-[28px] py-4">
           We build websites that bridge the gap between your property’s
           potential and its peak performance.
         </p>
@@ -32,7 +32,7 @@ export const Maximize = () => {
           alt="logo"
           width={680}
           height={320}
-          className="rounded-2xl lg:w-[680px] lg:h-[320px] w-[280px] h-[240px]"
+          className="rounded-2xl lg:w-[680px] md:w-full lg:h-[320px] w-[280px] h-[240px]"
         />
       </div>
     </div>

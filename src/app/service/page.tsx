@@ -32,7 +32,7 @@ export default function Services() {
         <div className="font-quicksand font-bold lg:text-5xl text-xl uppercase">
           STR WEBSITE BUILDING
         </div>
-        <div className="mt-[28px] grid grid-cols-1 lg:grid-cols-3 gap-[20px]">
+        <div className="mt-[28px] grid grid-cols-1 md:grid-cols-3 gap-[20px]">
           <div className="border-[0.5px] border-[#121212] text-[#121212] p-[16px] lg:p-[26px] rounded-[16px] max-w-[500px] lg:h-full lg:flex lg:flex-col lg:justify-between">
             <div className="font-quicksand font-bold text-[20px] lg:text-3xl">
               CUSTOM-DESIGNED{" "}
