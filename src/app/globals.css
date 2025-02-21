@@ -33,20 +33,27 @@ h6 {
   height: 100%;
 }
 
-.swiper .swiper-pagination-bullet {
+.custom-pagination .swiper-pagination-bullet {
   width: 10px;
   height: 10px;
-  opacity: 1;
-  background: rgb(182, 182, 182);
+  background: white;
+  opacity: 0.8;
   transition: all;
   transition-duration: 300ms;
-  margin-top: 40px;
 }
 
-.swiper .swiper-pagination-bullet-active {
-  color: #fff;
+.custom-pagination .swiper-pagination-bullet-active {
   background: #007aff;
-  scale: 120%;
+  scale: 130%;
   transition: all;
   transition-duration: 300ms;
+}
+
+.servicesscroll::-webkit-scrollbar {
+  display: none;
+}
+
+.servicesscroll {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
