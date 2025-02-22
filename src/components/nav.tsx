@@ -43,7 +43,7 @@ export const Nav = () => {
 
   return (
     <div className="py-6 text-2xl relative">
-      <nav className="border-2 border-text rounded-full flex gap-10 items-center justify-between py-3 md:px-6 lg:pr-[16px] px-2 ">
+      <nav className="border-2 border-text rounded-full flex gap-10 items-center justify-between py-3 lg:px-6 lg:pr-[16px] px-2 ">
         <Link href={"/"}>
           <Image
             src={logo}
@@ -54,7 +54,7 @@ export const Nav = () => {
           />
         </Link>
 
-        <ul className="gap-10 text-xl hidden lg:flex">
+        <ul className="gap-10 text-xl hidden md:flex">
           {navItems.map((items) => {
             const isActive = pathname === items.href;
             return (
@@ -74,14 +74,14 @@ export const Nav = () => {
         >
           <DarkButton
             text="Book a Consultation"
-            classname="text-xl hidden md:block"
+            classname="text-xl hidden lg:block"
           />
         </Link>
 
         {/* Mobile Menu Button */}
         <div
           onClick={handleNav}
-          className="cursor-pointer lg:hidden block pr-[10px]"
+          className="cursor-pointer md:hidden block pr-[10px]"
         >
           <Menu />
         </div>

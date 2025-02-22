@@ -55,13 +55,13 @@ export const ContactForm = () => {
   };
   return (
     <div className="md:py-20 py-10 md:px-24 px-3 ">
-      <h2 className="uppercase md:text-4xl pb-10 md:pb-16 font-semibold text-xl text-center">
+      <h2 className="uppercase lg:text-4xl pb-10 lg:pb-16 font-semibold text-xl text-center">
         Reach out to Us
       </h2>
       <div className="flex md:flex-row gap-5  justify-between flex-col-reverse">
         <form
           onSubmit={handleSubmit}
-          className="md:text-2xl flex flex-col w-full text-xl"
+          className="lg:text-2xl flex flex-col w-full text-xl"
         >
           <input
             type="email"
@@ -81,7 +81,7 @@ export const ContactForm = () => {
           />
           <div className="mt-8">
             <button
-              className="bg-primary-gradient text-text rounded-full w-full h-[51px]  md:h-[80px] p-[12px] space-x-[10px] lg:text-2xl text-[20px] transition duration-300 transform hover:scale-105"
+              className="bg-primary-gradient text-text rounded-full w-full h-[51px]  lg:h-[80px] p-[12px] space-x-[10px] lg:text-2xl text-[20px] transition duration-300 transform hover:scale-105"
               type="submit"
               disabled={loading}
             >
@@ -93,7 +93,7 @@ export const ContactForm = () => {
         <h2 className="uppercase md:hidden block  py-4  font-semibold text-xl text-center">
           Or Send Us a message
         </h2>
-        <div className="rounded-2xl w-full md:text-2xl text-xl border-[0.5px] border-text-dark">
+        <div className="rounded-2xl w-full lg:text-2xl text-xl border-[0.5px] border-text-dark">
           <h5 className="uppercase text-center p-4">Contact Details</h5>
           <p className="border-t-[0.5px] border-text-dark p-4 ">
             Phone: +447787458301

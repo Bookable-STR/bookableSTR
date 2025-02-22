@@ -15,7 +15,7 @@ export default function Footer() {
   const pathname = usePathname();
   return (
     <div>
-      <div className="bg-[#120F11] text-white w-full py-[60px] lg:flex  lg:justify-between">
+      <div className="bg-[#120F11] text-white w-full py-[60px] md:flex  lg:justify-between">
         {/*...*/}
         <div className="">
           <Image
@@ -33,7 +33,7 @@ export default function Footer() {
         </div>
 
         {/*...*/}
-        <div className="lg:flex block lg:pt-12 mt-[40px] lg:mt-0 px-[16px] items-start gap-10 lg:mr-[100px] lg:w-[40vw] lg:px-0 ">
+        <div className="md:flex block lg:pt-12 mt-[40px] lg:mt-0 px-[16px] items-start gap-10 lg:mr-[100px] lg:w-[40vw] lg:px-0 ">
           <div className="font-nunito text-xl lg:text-[22px]">
             <div className="font-quicksand pb-3 font-bold text-[24px]  lg:text-[28px]">
               NAVIGATION
