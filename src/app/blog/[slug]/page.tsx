@@ -1,11 +1,11 @@
 import { notFound } from "next/navigation";
 import { Header } from "./header";
 import Image from "next/image";
-import { FaFacebook, FaLinkedin, FaWhatsapp, FaLink } from "react-icons/fa6";
 import BlogCarousel from "./blogcarousel";
 import Homepage_CTA from "../../homepage_components/cta";
 import { client } from "../../../../sanity";
 import BlockContent from "./portableText";
+import Share from "./share";
 
 
 export async function generateStaticParams() {
@@ -87,15 +87,7 @@ async function BlogPage({ params }: { params: any }) {
                         </div>
                     </div>
                 </div>
-                <div className="w-full flex flex-col gap-[10px] items-center justify-center mt-[40px] lg:mt-[70px]">
-                    <div className="font-nunito font-semibold text-[24px]">Share this post</div>
-                    <div className="flex items-center justify-center gap-[15px] text-[28px]">
-                        <FaLink />
-                        <FaFacebook />
-                        <FaLinkedin />
-                        <FaWhatsapp />
-                    </div>
-                </div>
+                <Share />
             </div>
             <BlogCarousel slug={slug} />
             <Homepage_CTA />
