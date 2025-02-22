@@ -27,13 +27,13 @@ export default function Share() {
     };
 
     return (
-        <div className="w-full flex flex-col gap-[10px] items-center justify-center mt-[40px] lg:mt-[70px]">
+        <div className="w-full flex flex-col gap-[10px] items-center justify-center mt-[40px] lg:mt-[70px] text-text-dark">
             <div className="font-nunito font-semibold text-[24px]">Share this post</div>
             <div className="flex items-center justify-center gap-[15px] text-[28px]">
                 <button onClick={() => handleShare()}>
                     {copied ? <IoCheckmarkDoneOutline /> : <FaLink />}
                 </button>
-                <a href={`https://www.facebook.com/sharer/sharer.php?u=${url}`} target="_blank">
+                {/* <a href={`https://www.facebook.com/sharer/sharer.php?u=${url}`} target="_blank">
                     <FaFacebook />
                 </a>
                 <a href={`https://www.linkedin.com/sharing/share-offsite/?url=${url}`}>
@@ -41,7 +41,7 @@ export default function Share() {
                 </a>
                 <a href={`whatsapp://send?text=${url}`} data-action="share/whatsapp/share">
                     <FaWhatsapp />
-                </a>
+                </a> */}
             </div>
         </div>
     );
