@@ -55,7 +55,7 @@ export const ContactForm = () => {
   };
 
   return (
-    <div className="md:py-20 py-10 md:px-24 px-3 bg-white">
+    <div className="md:py-20 py-10 md:px-24 px-3 bg-white text-text-dark">
       <h2 className="uppercase lg:text-4xl pb-10 lg:pb-16 font-semibold text-xl text-center">
         Reach out to Us
       </h2>
@@ -70,7 +70,7 @@ export const ContactForm = () => {
             value={formData.email}
             onChange={handleChange}
             placeholder="Email Address"
-            className="rounded-xl border-[0.5px] w-full border-opacity-[60%] p-3 border-text-dark text-text-dark "
+            className="rounded-xl border-[0.5px] w-full border-opacity-[60%] p-3 border-text-dark text-text-dark"
           />
 
           <textarea
