@@ -53,8 +53,9 @@ export const ContactForm = () => {
       setLoading(false);
     }
   };
+
   return (
-    <div className="md:py-20 py-10 md:px-24 px-3 ">
+    <div className="md:py-20 py-10 md:px-24 px-3 bg-white">
       <h2 className="uppercase lg:text-4xl pb-10 lg:pb-16 font-semibold text-xl text-center">
         Reach out to Us
       </h2>

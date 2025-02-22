@@ -26,10 +26,10 @@ export default function Services() {
         </div>
       </div>
       <div className="bg-white flex flex-col items-center justify-center py-[40px] lg:py-[60px] px-[16px] lg:px-[40px]">
-        <div className="font-nunito font-medium text-[12px] lg:text-[24px]">
+        <div className="font-nunito font-medium text-[12px] lg:text-[24px] text-[#121212]">
           WE OFFER
         </div>
-        <div className="font-quicksand font-bold lg:text-5xl text-xl uppercase">
+        <div className="font-quicksand font-bold lg:text-5xl text-xl uppercase text-[#121212]">
           STR WEBSITE BUILDING
         </div>
         <div className="mt-[28px] grid grid-cols-1 md:grid-cols-3 gap-[20px]">

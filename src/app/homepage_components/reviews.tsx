@@ -10,6 +10,7 @@ import { client } from "../../../sanity";
 
 export default function Reviews() {
   const [screenWidth, setScreenWidth] = useState(0);
+  const [reviews, setReviews] = useState<any>();
 
   useEffect(() => {
     setScreenWidth(window.innerWidth);
@@ -19,38 +20,23 @@ export default function Reviews() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const reviews = [
-    {
-      img: customer1,
-      title: "I HIGHLY RECOMMEND",
-      body: `BookableSTR has been amazing! They took the time to understand my needs, 
-                 built a perfect booking site, and supported me every step of the way. 
-                 The process was smooth, and my direct bookings have increased. 
-                 I couldn’t be happier!`,
-      name: "KUNLE OSIDELE",
-      url: "https://www.kotmanagement.com",
-    },
-    {
-      img: customer1,
-      title: "I HIGHLY RECOMMEND",
-      body: `BookableSTR has been amazing! They took the time to understand my needs, 
-                 built a perfect booking site, and supported me every step of the way. 
-                 The process was smooth, and my direct bookings have increased. 
-                 I couldn’t be happier!`,
-      name: "KUNLE OSIDELE",
-      url: "https://www.kotmanagement.com",
-    },
-    {
-      img: customer1,
-      title: "I HIGHLY RECOMMEND",
-      body: `BookableSTR has been amazing! They took the time to understand my needs, 
-                 built a perfect booking site, and supported me every step of the way. 
-                 The process was smooth, and my direct bookings have increased. 
-                 I couldn’t be happier!`,
-      name: "KUNLE OSIDELE",
-      url: "https://www.kotmanagement.com",
-    },
-  ];
+  useEffect(() => {
+    async function fetchReviews() {
+      const query = `*[_type == "review"] {
+            _id,
+            title,
+            review,
+            "image": image.asset->url,
+            name,
+            url
+        }`;
+      const reviews = await client.fetch(query);
+      if (reviews.length > 0) {
+        setReviews(reviews)
+      }
+    }
+    fetchReviews();
+  }, []);
 
   return (
     <div className="bg-[#121212] py-[40px] px-[16px] lg:p-[102px]">
@@ -70,7 +56,7 @@ export default function Reviews() {
           modules={[Pagination]}
           className="mySwiper"
         >
-          {reviews.map((i, index) => (
+          {reviews && reviews.length > 0 && reviews.map((i: any, index: any) => (
             <SwiperSlide key={index}>
               <div className="bg-[#FFFBFB] pb-[60px] px-[16px] lg:px-[28px] rounded-[16px] relative overflow-hidden">
                 <div className="font-quicksand font-semibold text-[80px] lg:text-[160px] h-[60px] lg:h-[100px] lg:-mt-[40px] text-[#054678]">
@@ -80,7 +66,7 @@ export default function Reviews() {
                   {i.title}
                 </div>
                 <div className="font-nunito font-medium text-[#121212] mt-[16px] lg:text-[20px]">
-                  {i.body}
+                  {i.review}
                 </div>
                 <div className="flex justify-between items-center mt-[22px]">
                   <div>
@@ -96,7 +82,7 @@ export default function Reviews() {
                   </div>
                   <div className="border border-gray-300 w-[100px] h-[100px] lg:w-[150px] lg:h-[150px] relative rounded-full overflow-hidden">
                     <Image
-                      src={i.img}
+                      src={i.image}
                       alt="client"
                       fill
                       className="object-cover"
