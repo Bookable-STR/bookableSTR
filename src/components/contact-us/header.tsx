@@ -21,10 +21,7 @@ export const Header = () => {
         </p>
 
         <div className="flex items-center mt-4 lg:mb-4 mb-32">
-          <Link
-            href="mailto:bookablestr@gmail.com?subject=Inquiry&body=Hello,%I%have%a%question."
-            target="_blank"
-          >
+          <Link href="https://calendly.com/bookablestr/30min" target="_blank">
             <LightButton text="Get Bookable" />
           </Link>
         </div>

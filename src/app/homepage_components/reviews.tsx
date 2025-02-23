@@ -32,7 +32,7 @@ export default function Reviews() {
         }`;
       const reviews = await client.fetch(query);
       if (reviews.length > 0) {
-        setReviews(reviews)
+        setReviews(reviews);
       }
     }
     fetchReviews();
@@ -56,42 +56,44 @@ export default function Reviews() {
           modules={[Pagination]}
           className="mySwiper"
         >
-          {reviews && reviews.length > 0 && reviews.map((i: any, index: any) => (
-            <SwiperSlide key={index}>
-              <div className="bg-[#FFFBFB] pb-[60px] px-[16px] lg:px-[28px] rounded-[16px] relative overflow-hidden">
-                <div className="font-quicksand font-semibold text-[80px] lg:text-[160px] h-[60px] lg:h-[100px] lg:-mt-[40px] text-[#054678]">
-                  “
-                </div>
-                <div className="mt-[16px] lg:mt-[28px] text-[#121212] font-quicksand font-bold lg:text-[32px]">
-                  {i.title}
-                </div>
-                <div className="font-nunito font-medium text-[#121212] mt-[16px] lg:text-[20px]">
-                  {i.review}
-                </div>
-                <div className="flex justify-between items-center mt-[22px]">
-                  <div>
-                    <div className="text-[#121212] font-quicksand font-bold lg:text-[24px]">
-                      {i.name}
+          {reviews &&
+            reviews.length > 0 &&
+            reviews.map((i: any, index: any) => (
+              <SwiperSlide key={index}>
+                <div className="bg-[#FFFBFB] lg:h-[500px] pb-[60px] px-[16px] lg:px-[28px] rounded-[16px] relative overflow-hidden">
+                  <div className="font-quicksand font-semibold text-[80px] lg:text-[160px] h-[60px] lg:h-[100px] lg:-mt-[40px] text-[#054678]">
+                    “
+                  </div>
+                  <div className="mt-[16px] lg:mt-[28px] text-[#121212] font-quicksand font-bold lg:text-[32px]">
+                    {i.title}
+                  </div>
+                  <div className="font-nunito font-medium text-[#121212] mt-[16px] lg:text-[20px]">
+                    {i.review}
+                  </div>
+                  <div className="flex justify-between items-center mt-[22px]">
+                    <div>
+                      <div className="text-[#121212] font-quicksand font-bold lg:text-[24px]">
+                        {i.name}
+                      </div>
+                      <a
+                        href={i.url}
+                        className="mt-[8px] font-quicksand font-bold py-[8px] lg:text-[24px] border-b border-[#054678] text-[#054678]"
+                      >
+                        View website
+                      </a>
                     </div>
-                    <a
-                      href={i.url}
-                      className="mt-[8px] font-quicksand font-bold py-[8px] lg:text-[24px] border-b border-[#054678] text-[#054678]"
-                    >
-                      View website
-                    </a>
-                  </div>
-                  <div className="border border-gray-300 w-[100px] h-[100px] lg:w-[150px] lg:h-[150px] relative rounded-full overflow-hidden">
-                    <Image
-                      src={i.image}
-                      alt="client"
-                      fill
-                      className="object-cover"
-                    />
+                    <div className="border border-gray-300 w-[100px] h-[100px] lg:w-[150px] lg:h-[150px] relative rounded-full overflow-hidden">
+                      <Image
+                        src={i.image}
+                        alt="client"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
                   </div>
                 </div>
-              </div>
-            </SwiperSlide>
-          ))}
+              </SwiperSlide>
+            ))}
         </Swiper>
         <div className="custom-pagination flex justify-center gap-[5px] mt-[20px]"></div>
       </div>

@@ -23,14 +23,11 @@ export const Header = () => {
         </p>
 
         <div className="lg:flex items-center  lg:gap-[40px] mt-4 lg:mb-4 mb-32">
-          <Link
-            href="mailto:bookablestr@gmail.com?subject=Inquiry&body=Hello, I have a question."
-            target="_blank"
-          >
+          <Link href="https://calendly.com/bookablestr/30min" target="_blank">
             <LightButton text="Get Bookable" />
           </Link>
           <div className="mt-[20px] lg:mt-0">
-            <Link href="/about">
+            <Link href="/service">
               <NoBgButton text="See our Work" />
             </Link>
           </div>

@@ -43,7 +43,7 @@ export const Nav = () => {
 
   return (
     <div className="py-6 text-2xl relative">
-      <nav className="border-2 border-text rounded-full flex gap-10 items-center justify-between py-3 lg:px-6 lg:pr-[16px] px-2 ">
+      <nav className="border-2 border-text rounded-full flex gap-10 items-center justify-between py-1 md:py-3 lg:px-6 lg:pr-[16px] px-2 ">
         <Link href={"/"}>
           <Image
             src={logo}
@@ -68,10 +68,7 @@ export const Nav = () => {
             );
           })}
         </ul>
-        <Link
-          target="_blank"
-          href="mailto:bookablestr@gmail.com?subject=Inquiry&body=Hello,%I%have%a%question."
-        >
+        <Link target="_blank" href="https://calendly.com/bookablestr/30min">
           <DarkButton
             text="Book a Consultation"
             classname="text-xl hidden lg:block"
@@ -136,7 +133,7 @@ export const Nav = () => {
               <div className="mt-20 mx-3">
                 <Link
                   target="_blank"
-                  href="mailto:bookablestr@gmail.com?subject=Inquiry&body=Hello,%I%have%a%question."
+                  href="https://calendly.com/bookablestr/30min"
                 >
                   <DarkButton text="Get Bookable" classname="text-xl p-3" />
                 </Link>
