@@ -6,30 +6,10 @@ import { Pagination } from 'swiper/modules';
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { client } from "../../../sanity";
 
-export default function BlogCarousel() {
+export default function BlogCarousel({ blogs }: { blogs: any }) {
 
     const [screenWidth, setScreenWidth] = useState(0);
-    const [blogs, setBlogs] = useState<any>();
-
-    useEffect(() => {
-        async function fetchBlogs() {
-            const query = `*[_type == "post"] {
-                _id,
-                title,
-                slug,
-                "mainImage": mainImage.asset->url,
-                publishedAt,
-                body
-            }`;
-            const blogs = await client.fetch(query);
-            if (blogs.length > 0) {
-                setBlogs(blogs)
-            }
-        }
-        fetchBlogs();
-    }, []);
 
     useEffect(() => {
         setScreenWidth(window.innerWidth);

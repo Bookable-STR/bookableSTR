@@ -3,7 +3,7 @@ import { Nav } from "../../components/nav";
 import { LightButton } from "../../components/ui/lightButton";
 import Link from "next/link";
 
-export const Header = () => {
+export const Header = ({ url }: { url: any }) => {
   return (
     <div className="md:bg-mobile lg:text-2xl text-base bg-desktop px-6 font-nunito lg:px-10 bg-cover bg-center text-text w-full">
       <Nav />
@@ -21,7 +21,7 @@ export const Header = () => {
         </p>
 
         <div className="md:flex items-center  md:gap-[40px] mt-4 md:mb-4 mb-32">
-          <Link href="/blog/12dfg32amu24">
+          <Link href={url && `/blog/${url}`}>
             <LightButton text="Visit Blog" />
           </Link>
 
