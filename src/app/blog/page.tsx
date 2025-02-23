@@ -28,7 +28,7 @@ export default function BlogPage() {
 
     return (
         <div>
-            <Header url={blogs[0].slug.current} />
+            <Header url={blogs && blogs.length > 0 && blogs[0].slug.current} />
             <BlogCarousel blogs={blogs} />
             <Homepage_CTA />
         </div>

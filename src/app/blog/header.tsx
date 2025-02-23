@@ -21,10 +21,11 @@ export const Header = ({ url }: { url: any }) => {
         </p>
 
         <div className="md:flex items-center  md:gap-[40px] mt-4 md:mb-4 mb-32">
-          <Link href={url && `/blog/${url}`}>
-            <LightButton text="Visit Blog" />
-          </Link>
-
+          {
+            url && <Link href={`/blog/${url}`}>
+              <LightButton text="Visit Blog" />
+            </Link>
+          }
           <div className="mt-[20px] md:mt-0"></div>
         </div>
       </div>
