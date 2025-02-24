@@ -10,7 +10,7 @@ export default function Faq() {
     },
     {
       question: `What fees do you charge for your services?`,
-      answer: `BookableSTR is a professional short-term rental management service that specializes in maximizing the profitability of your rental property`,
+      answer: `Our fees are competitive and tailored to your property's needs. We typically operate on a performance-based structure, meaning we only succeed when you succeed. Specific details will be outlined during our consultation.`,
     },
     {
       question: `How do I get started with BookableSTR?`,
@@ -51,15 +51,13 @@ function FaqItem({ i }: { i: any }) {
         </div>
         <ChevronDown
           onClick={() => setShowanswer(!showanswer)}
-          className={`text-[12px] flex-shrink-0 ${
-            showanswer ? "rotate-180" : "rotate-0"
-          } cursor-pointer`}
+          className={`text-[12px] flex-shrink-0 ${showanswer ? "rotate-180" : "rotate-0"
+            } cursor-pointer`}
         />
       </div>
       <div
-        className={`font-nunito text-[12px] lg:text-[24px] ${
-          showanswer ? "h-max mt-[8px] lg:mt-[16px]" : "h-0 mt-0"
-        } overflow-hidden`}
+        className={`font-nunito text-[12px] lg:text-[24px] ${showanswer ? "h-max mt-[8px] lg:mt-[16px]" : "h-0 mt-0"
+          } overflow-hidden`}
       >
         {i.answer}
       </div>
