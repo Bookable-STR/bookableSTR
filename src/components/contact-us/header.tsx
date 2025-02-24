@@ -13,7 +13,7 @@ export const Header = () => {
           Hey you, let’s stay connected
         </p>
         <h1 className="lg:leading-[56px] leading-[30px] text-2xl w-full md:w-[70%] lg:text-[50px] uppercase font-bold font-quicksand">
-          We are a click away from rendering our services.
+          We are a click away from rendering your services.
         </h1>
         <p className="md:w-[80%] lg:leading-[36px] leading-[21px] text-base w-full lg:text-[28px] text-center">
           Let’s help you manage your rental property through a personalized
