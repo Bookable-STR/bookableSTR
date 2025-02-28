@@ -26,7 +26,7 @@ export const Vision = () => {
               alt="eye pop icon"
               width={340}
               height={340}
-              className="w-[200px] h-[200px] lg-w-[340px] rounded-bl-xl lg-h-[340px]"
+              className="w-[200px] h-[200px] lg:w-[340px] rounded-bl-xl lg:h-[340px]"
             />
           </div>
         </div>
@@ -40,17 +40,17 @@ export const Vision = () => {
               alt="eye pop icon"
               width={340}
               height={340}
-              className="w-[200px] h-[200px] lg-w-[340px] lg-h-[340px]"
+              className="w-[200px] h-[200px] lg:w-[340px] lg:h-[340px]"
             />
           </div>
           <div className="pt-48">
             <div className="leading-none font-semibold md:pb-4 pb-1">
-              <h3 className="text-[20px] lg-text-[52px] text-text-dark">Our</h3>
-              <h3 className="text-[24px] lg-text-[68px] uppercase text-primaryBlue">
+              <h3 className="text-[20px] lg:text-[52px] text-text-dark">Our</h3>
+              <h3 className="text-[24px] lg:text-[68px] uppercase text-primaryBlue">
                 Mission
               </h3>
             </div>
-            <p className="lg-text-[28px] md:my-6 my-2 text-base md:leading-[36px]">
+            <p className="lg:text-[28px] md:my-6 my-2 text-base md:leading-[36px]">
               To create user-friendly, feature-rich direct booking websites that
               simplify operations, enhance guest experiences, and drive
               sustainable growth for property owners.
