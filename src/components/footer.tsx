@@ -53,7 +53,7 @@ export default function Footer() {
               INFORMATION
             </div>
             <div className="mt-[12px]">Phone: +447787458301 </div>
-            <div>Email: bookablestr@gmail.com</div>
+            <div>Email: sales@bookablestr.com</div>
           </div>
         </div>
         {/*...*/}
