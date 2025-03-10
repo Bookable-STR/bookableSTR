@@ -100,7 +100,7 @@ export const ContactForm = () => {
             Phone: +447787458301
           </p>
           <p className="border-y-[0.5px] border-text-dark p-4 ">
-            Email: bookablestr@gmail.com
+            Email: sales@bookablestr.com
           </p>
           <h6 className="uppercase text-center p-4">
             Looking forward to your message

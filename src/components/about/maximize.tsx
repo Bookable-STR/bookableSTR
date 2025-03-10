@@ -18,7 +18,7 @@ export const Maximize = () => {
 
         <div className="flex items-center my-4">
           <Link
-            href="mailto:bookablestr@gmail.com?subject=Inquiry&body=Hello,%I%have%a%question."
+            href="mailto:sales@bookablestr.com?subject=Inquiry&body=Hello,%I%have%a%question."
             target="_blank"
           >
             <DarkButton text="Get Bookable" />
