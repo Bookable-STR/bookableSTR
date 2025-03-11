@@ -1,4 +1,3 @@
-"use client"
 import { notFound } from "next/navigation";
 import { Header } from "./header";
 import Image from "next/image";
