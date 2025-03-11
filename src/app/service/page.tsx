@@ -2,12 +2,10 @@
 import { Header } from "./header";
 import Reviews from "../homepage_components/reviews";
 import Homepage_CTA from "../homepage_components/cta";
-import { NextSeo } from "next-seo";
 
 export default function Services() {
   return (
     <div>
-      <NextSeo title="bookablestr services" description="direct booking website, property rentals, vacation rental websites, bookablestr" />
       <Header />
       <div className="bg-white text-[#121212] py-[40px] px-[16px] lg:py-[40px]">
         <div className="font-nunito uppercase font-medium text-[12px] lg:text-[24px] text-center">
