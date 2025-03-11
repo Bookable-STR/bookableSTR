@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://bookablestr.com/sitemap.xml
