@@ -6,6 +6,7 @@ import Homepage_CTA from "../../homepage_components/cta";
 import { client } from "../../../../sanity";
 import BlockContent from "./portableText";
 import Share from "./share";
+import { NextSeo } from "next-seo";
 
 
 export async function generateStaticParams() {
@@ -40,6 +41,7 @@ async function BlogPage({ params }: { params: any }) {
 
     return (
         <div className="">
+            <NextSeo title={blog.slug.current} description="direct booking website, property rentals, vacation rental websites, bookablestr" />
             <Header name={blog.title} date={new Date(blog.publishedAt).toLocaleDateString("en-US", { dateStyle: 'full' })} />
             {/* <div className="bg-white py-[40px] px-[16px] lg:p-[100px] flex flex-col lg:flex-row-reverse items-center justify-center lg:gap-[100px]">
                 <div className="relative w-full h-[240px] max-w-[360px] lg:h-[360px] rounded-[16px] overflow-hidden">
