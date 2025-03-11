@@ -8,7 +8,7 @@ export const Header = () => {
   return (
     <div className="md:bg-mobile lg:text-2xl text-base bg-desktop px-6 font-nunito lg:px-10 bg-cover bg-center text-text w-full">
       <Nav />
-
+<h1 className="hidden">BookableSTR - Direct Booking Websites for Rentals</h1>
       <div className="flex flex-col text-center items-center justify-center lg:gap-6 gap-3 pt-20 pb-10">
         <p className="text-[10px] md:text-xl uppercase">
           UNLOCK YOUR SHORT-TERM RENTALS FULL POTENTIAL
