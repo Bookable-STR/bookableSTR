@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import { Header } from "../../components/about/header";
 import { Access } from "../../components/access";

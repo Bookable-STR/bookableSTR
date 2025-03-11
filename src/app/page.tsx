@@ -1,3 +1,4 @@
+"use client"
 import { Header } from "../components/header";
 import React from "react";
 import Homepage_CTA from "./homepage_components/cta";
