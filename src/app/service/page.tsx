@@ -94,7 +94,7 @@ export default function Services() {
             </p>
 
             <Link href="https://doncaster-housing.netlify.app/">
-              <button className="text-primaryBlue transition border border-primaryBlue rounded-full  p-4 duration-300 transform hover:bg-primaryBlue hover:text-text hover:scale-105">
+              <button className="text-primaryBlue transition border border-primaryBlue rounded-full  w-full p-4 duration-300 transform hover:bg-primaryBlue hover:text-text hover:scale-105">
                 Check Site
               </button>
             </Link>
