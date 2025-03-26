@@ -71,7 +71,7 @@ export default function Services() {
           </div>
         </div>
       </div>
-      <div className="py-10 lg:px-12 px-6" id="previousServices">
+      <div className="py-10 bg-white lg:px-12 px-6" id="previousServices">
         <p className="font-quicksand font-bold lg:text-3xl text-xl text-center text-[#121212] uppercase">
           Services we have built
         </p>
