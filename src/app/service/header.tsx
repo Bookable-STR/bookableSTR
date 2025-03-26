@@ -23,7 +23,7 @@ export const Header = () => {
             <LightButton text="Get Bookable" />
           </Link>
           <div className="mt-[20px] md:mt-0">
-            <Link href="/service#reviews">
+            <Link href="/service#previousServices">
               <button
                 className={
                   "h-[28px] md:h-[62px] text-base md:py-[12px] py-[8px] px-[2px] space-x-[10px] lg:text-2xl transition duration-300 transform hover:scale-105 bg-none text-text border-b-2 border-b-text font-bold leading-[21px]  md:leading-[32.74px] tracking-[6%]"

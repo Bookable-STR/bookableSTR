@@ -2,6 +2,11 @@
 import { Header } from "./header";
 import Reviews from "../homepage_components/reviews";
 import Homepage_CTA from "../homepage_components/cta";
+import Image from "next/image";
+import Doncaster from "../../images/Doncaster-Housing.png";
+import { LightButton } from "../../components/ui/lightButton";
+import Link from "next/link";
+import { NoBgButton } from "../../components/ui/noBgButton";
 
 export default function Services() {
   return (
@@ -63,6 +68,36 @@ export default function Services() {
               We streamline bookings with automation, calendars, and guest
               tools, saving you time and enhancing the guest experience.
             </div>
+          </div>
+        </div>
+      </div>
+      <div className="py-10 lg:px-12 px-6" id="previousServices">
+        <p className="font-quicksand font-bold lg:text-3xl text-xl text-center text-[#121212] uppercase">
+          Services we have built
+        </p>
+        <div className="flex lg:flex-row py-4 flex-col gap-10">
+          <Image
+            src={Doncaster}
+            alt="Doncaster housing"
+            width={500}
+            height={500}
+            className="lg:w-1/2 w-full"
+          />
+          <div className="lg:w-1/2 w-full py-4 text-base lg:text-2xl">
+            <h3 className="uppercase font-bold">Doncaster Housing</h3>
+            <p className="py-4">
+              A platform that connects renters with property owners in
+              Doncaster, offering a variety of housing options to suit different
+              needs and budgets. With an easy-to-use interface, transparent
+              listings, and reliable customer support, we make the renting
+              process simple and hassle-free
+            </p>
+
+            <Link href="https://doncaster-housing.netlify.app/">
+              <button className="text-primaryBlue transition border border-primaryBlue rounded-full  p-4 duration-300 transform hover:bg-primaryBlue hover:text-text hover:scale-105">
+                Check Site
+              </button>
+            </Link>
           </div>
         </div>
       </div>
