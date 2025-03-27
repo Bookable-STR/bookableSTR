@@ -70,7 +70,7 @@ export default function Services() {
         </div>
       </div>
       <div
-        className="py-10 lg:px-12 px-6 bg-white text-text-[#121212]"
+        className="py-10 lg:px-12 px-6 bg-white text-[#121212]"
         id="templates"
       >
         <p className="font-quicksand font-bold lg:text-3xl text-xl text-center text-[#121212] uppercase">
