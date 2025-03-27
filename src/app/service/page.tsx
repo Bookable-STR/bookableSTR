@@ -4,13 +4,11 @@ import Reviews from "../homepage_components/reviews";
 import Homepage_CTA from "../homepage_components/cta";
 import Image from "next/image";
 import Doncaster from "../../images/Doncaster-Housing.png";
-import { LightButton } from "../../components/ui/lightButton";
 import Link from "next/link";
-import { NoBgButton } from "../../components/ui/noBgButton";
 
 export default function Services() {
   return (
-    <div>
+    <div className="bg-white">
       <Header />
       <div className="bg-white text-[#121212] py-[40px] px-[16px] lg:py-[40px]">
         <div className="font-nunito uppercase font-medium text-[12px] lg:text-[24px] text-center">
@@ -71,9 +69,12 @@ export default function Services() {
           </div>
         </div>
       </div>
-      <div className="py-10 lg:px-12 px-6" id="templates">
+      <div
+        className="py-10 lg:px-12 px-6 bg-white text-text-[#121212]"
+        id="templates"
+      >
         <p className="font-quicksand font-bold lg:text-3xl text-xl text-center text-[#121212] uppercase">
-          Templates
+          Templates We&apos;ve built
         </p>
         <div className="flex lg:flex-row py-4 flex-col gap-10">
           <Image

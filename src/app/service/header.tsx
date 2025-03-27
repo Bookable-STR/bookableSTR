@@ -2,6 +2,7 @@ import React from "react";
 import { Nav } from "../../components/nav";
 import { LightButton } from "../../components/ui/lightButton";
 import Link from "next/link";
+import { DarkButton } from "../../components/ui/darkButton";
 
 export const Header = () => {
   return (
@@ -18,10 +19,11 @@ export const Header = () => {
           help you optimize profits from your rental properties.
         </p>
 
-        <div className="md:flex items-center  md:gap-[40px] mt-4 lg:mb-4 mb-32">
-          <Link href="/service#templates">
-            <LightButton text="View Templates" />
+        <div className="md:flex items-center  md:gap-[40px] mt-4 ">
+          <Link href="https://calendly.com/bookablestr/30min" target="_blank">
+            <LightButton text="Get Bookable" />
           </Link>
+
           <div className="mt-[20px] md:mt-0">
             <Link href="/service#reviews">
               <button
@@ -33,6 +35,12 @@ export const Header = () => {
               </button>
             </Link>
           </div>
+        </div>
+
+        <div className="mb-32 lg:mb-4 mt-4">
+          <Link href="/service#templates">
+            <DarkButton text="See Templates" />
+          </Link>
         </div>
       </div>
     </div>
