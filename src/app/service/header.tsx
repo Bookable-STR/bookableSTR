@@ -19,11 +19,11 @@ export const Header = () => {
         </p>
 
         <div className="md:flex items-center  md:gap-[40px] mt-4 lg:mb-4 mb-32">
-          <Link target="_blank" href="https://calendly.com/bookablestr/30min">
-            <LightButton text="Get Bookable" />
+          <Link href="/service#templates">
+            <LightButton text="View Templates" />
           </Link>
           <div className="mt-[20px] md:mt-0">
-            <Link href="/service#previousServices">
+            <Link href="/service#reviews">
               <button
                 className={
                   "h-[28px] md:h-[62px] text-base md:py-[12px] py-[8px] px-[2px] space-x-[10px] lg:text-2xl transition duration-300 transform hover:scale-105 bg-none text-text border-b-2 border-b-text font-bold leading-[21px]  md:leading-[32.74px] tracking-[6%]"
